@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Job Payment Calculator</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+
+    <div id="app">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-sm-12">
+                    <h1 class="text-center text-warning p-3">{{title}}</h1>
+                </div>
+                <div class="col-sm-12 mb-3">
+                    <label for="hours" class="form-label">Worked Hours</label>
+                    <input type="number" step="0.01" v-model.number="hours" id="hours" class="form-control" />
+                </div>
+                <div class="col-sm-12 mb-3">
+                    <label for="cost" class="form-label">Cost by Hour</label>
+                    <input type="number" step="0.01" v-model.number="cost_hour" id="cost" class="form-control" />
+                </div>
+                <div class="col-sm-12 mb-3">
+                    <div class="card text-center">
+                        <div class="card-body bg-dark">
+                            <h3 class="text-warning">Total Payment</h3> 
+                            <p class="text-warning">{{calculatePayment}} $</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="app.js"></script>
+    </body>
+</html>
